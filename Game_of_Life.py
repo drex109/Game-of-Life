@@ -127,51 +127,52 @@ def other_next_board_state(initial_state):
     return new_state   
 
 def runGame():
-    user_input1 = input('Please choose one \n -1- random soup \n -2- load pattern \n')
-    if user_input1 == '2':
-        user_inputL = input('Choose a pattern \n -1- Toad \n -2- Gosper Glider Gun \n -3- Pulsar \n')
-        
-        if user_inputL == '1':
-            start = loaded_state('toad.txt')
-            board = next_board_state(start)
-            while True:
-                board = next_board_state(board)
-                render(board)
-                time.sleep(.3)
-        
-        if user_inputL == '2':
-            start = loaded_state('GGG.txt')
-            board = next_board_state(start)
-            while True:
-                board = next_board_state(board)
-                render(board)
-                time.sleep(.2)
-        
-        if user_inputL == '3':
-            start = loaded_state('pulsar.txt')
-            board = next_board_state(start)
-            while True:
-                board = next_board_state(board)
-                render(board)
-                time.sleep(.4)
-        
-        else:
-            print('ERROR:Please enter a 1, 2, or 3')
-
-
-    if user_input1 == '1':
-        start = random_state(312,83)
-        board = next_board_state(start)
-        while True:
-            board = next_board_state(board)
-            render(board)
+    #user_input1 = input('Please choose one \n -1- random soup \n -2- load pattern \n')
+    #if user_input1 == '2':
+    #    user_inputL = input('Choose a pattern \n -1- Toad \n -2- Gosper Glider Gun \n -3- Pulsar \n')
+    #    
+    #    if user_inputL == '1':
+    #        start = loaded_state('toad.txt')
+    #        board = next_board_state(start)
+    #        while True:
+    #            board = next_board_state(board)
+    #            render(board)
+    #            time.sleep(.3)
+    #    
+    #    if user_inputL == '2':
+    #        start = loaded_state('GGG.txt')
+    #        board = next_board_state(start)
+    #        while True:
+    #            board = next_board_state(board)
+    #            render(board)
+    #            time.sleep(.2)
+    #    
+    #    if user_inputL == '3':
+    #        start = loaded_state('pulsar.txt')
+    #        board = next_board_state(start)
+    #        while True:
+    #            board = next_board_state(board)
+    #            render(board)
+    #            time.sleep(.4)
+    #    
+    #    else:
+    #        print('ERROR:Please enter a 1, 2, or 3')
+#
+#
+    #if user_input1 == '1':
+    start = random_state(312,83)
+    board = next_board_state(start)
+    while True:
+        board = next_board_state(board)
+        render(board)
     
-    else:
-        print('ERROR: Please enter a 1 or 2')
+    #else:
+        #print('ERROR: Please enter a 1 or 2')
 
 runGame()
 
-#terminal in fullcreen (312,83)
+#CMD in fullcreen (312,83)
+#PowerShell in fullscreen (359,95)
 #Conway -b3s23-
 #Day and Night -b3678s34678-
 #High Life -b36s23-
